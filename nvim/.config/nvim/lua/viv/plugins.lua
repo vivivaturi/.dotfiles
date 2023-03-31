@@ -57,6 +57,7 @@ return packer.startup(function(use)
 	use({ "gelguy/wilder.nvim" })
 	use({ "ahmedkhalf/project.nvim" })
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
+	use({ "moll/vim-bbye" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -79,17 +80,7 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim" })
 
 	-- Line diagnostics
-	use({
-		"folke/trouble.nvim",
-		requires = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
+	use({ "folke/trouble.nvim" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
@@ -126,6 +117,7 @@ return packer.startup(function(use)
 		},
 	})
 
+	-- Zen-Mode
 	use({
 		"folke/zen-mode.nvim",
 		config = function()
@@ -136,6 +128,18 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
+	-- Aerial
+	use({ "stevearc/aerial.nvim" })
+
+	-- Lualine
+	use({ "nvim-lualine/lualine.nvim" })
+
+	-- Bufferline
+	use({ "akinsho/bufferline.nvim" })
+
+	-- Scope for bufferline
+	use({ "tiagovla/scope.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

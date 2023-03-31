@@ -49,3 +49,9 @@ color.setup({
 
 -- setup must be called before loading
 vim.cmd("colorscheme carbonfox")
+
+-- Based on:
+-- https://github.com/EdenEast/nightfox.nvim/blob/main/misc/feline.lua
+-- https://github.com/EdenEast/nightfox.nvim/blob/main/misc/tabby.lua
+-- require("viv.ui.tabby")
+-- require("viv.ui.feline")

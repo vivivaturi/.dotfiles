@@ -25,10 +25,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<M-Up>", ":resize +3<CR>", opts)
+keymap("n", "<M-Down>", ":resize -3<CR>", opts)
+keymap("n", "<M-Left>", ":vertical resize +3<CR>", opts)
+keymap("n", "<M-Right>", ":vertical resize -3<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -158,3 +158,12 @@ keymap("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- s
 keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+
+-- Trouble
+keymap("n", "<leader>tt", "<cmd>TroubleToggle<cr>")
+keymap("n", "<leader>tw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
+keymap("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>")
+keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>")
+
+-- Aerial
+keymap("n", "<leader>at", "<cmd>AerialToggle<cr>")

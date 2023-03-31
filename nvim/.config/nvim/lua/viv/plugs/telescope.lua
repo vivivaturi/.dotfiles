@@ -5,6 +5,18 @@ end
 
 local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
+local telescopeConfig = require("telescope.Config")
+
+local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+
+-- I want to search in hidden/dot files.
+table.insert(vimgrep_arguments, "--hidden")
+-- I don't want to search in the `.git` directory.
+table.insert(vimgrep_arguments, "--glob")
+table.insert(vimgrep_arguments, "!**/.git/*")
+
+-- I want to follow symbolic links
+table.insert(vimgrep_arguments, "-L")
 
 local function telescope_buffer_dir()
 	return vim.fn.expand("%:p:h")
@@ -19,6 +31,7 @@ telescope.setup({
 		selection_caret = " ",
 		path_display = { "smart" },
 		file_ignore_patterns = { ".git/", "node_modules" },
+		vimgrep_arguments = vimgrep_arguments,
 
 		mappings = {
 			i = {
@@ -50,6 +63,12 @@ telescope.setup({
 					end,
 				},
 			},
+		},
+	},
+	pickers = {
+		find_files = {
+			follow = true,
+			hidden = true,
 		},
 	},
 })

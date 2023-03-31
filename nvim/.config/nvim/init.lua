@@ -1,24 +1,8 @@
-require "viv.impatient"
-require "viv.core.options"
-require "viv.core.keymaps"
-require "viv.core.colorscheme"
-require "viv.plugins"
-require "viv.autocommands"
-require "viv.cmp"
-require "viv.telescope"
-require "viv.gitsigns"
-require "viv.treesitter"
-require "viv.autopairs"
-require "viv.comment"
-require "viv.nvim-tree"
-require "viv.bufferline"
-require "viv.lualine"
-require "viv.project"
-require "viv.illuminate"
-require "viv.indentline"
-require "viv.alpha"
-require "viv.lsp"
-require "viv.dap"
-require "viv.wilder"
-require "viv.navbuddy"
-require "viv.zen"
+require("viv.core.colorscheme")
+require("viv.core.preferences")
+require("viv.core.keymaps")
+
+require("viv.plugins")
+
+require("viv.lsp.init")
+require("viv.plugs.start")

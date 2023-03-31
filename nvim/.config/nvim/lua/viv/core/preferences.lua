@@ -1,4 +1,6 @@
--- NeoVim Options File Vivek Ivaturi
+-- Neovim Options File
+--
+-- Vivek Ivaturi
 --
 
 ------------------------------------
@@ -12,7 +14,7 @@ vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying me
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
-vim.opt.hlsearch = true -- highlight all matches on previous search pattern
+vim.opt.hlsearch = false -- highlight all matches on previous search pattern
 vim.opt.incsearch = true
 
 vim.opt.ignorecase = true -- ignore case in search patterns

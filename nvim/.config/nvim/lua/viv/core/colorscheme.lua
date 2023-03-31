@@ -1,75 +1,57 @@
--- local valid_colorscemes = {
---   "tokyonight",
---   "darkplus",
---   "gruvbox",
---   "neosolarized",
--- }
-
-local colorscheme = "gruvbox"
-
-local status_ok, gruvbox = pcall(require, colorscheme)
-if not status_ok then
-  return
+color_setup, color = pcall(require, "nightfox")
+if not color_setup then
+	return
 end
 
-gruvbox.setup {
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = {
-    strings = true,
-    comments = true,
-    operators = false,
-    folds = true,
-  },
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "hard", -- can be "hard", "soft" or empty string
-  palette_overrides = {},
-  overrides = {},
-  dim_inactive = false,
-  transparent_mode = false,
-}
-vim.cmd "colorscheme gruvbox"
+color.setup({
+	options = {
+		-- Compiled file's destination location
+		compile_path = vim.fn.stdpath("cache") .. "/nightfox",
+		compile_file_suffix = "_compiled", -- Compiled file suffix
+		transparent = false, -- Disable setting background
+		terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+		dim_inactive = false, -- Non focused panes set to alternative background
+		module_default = true, -- Default enable value for modules
+		colorblind = {
+			enable = false, -- Enable colorblind support
+			simulate_only = false, -- Only show simulated colorblind colors and not diff shifted
+			severity = {
+				protan = 0, -- Severity [0,1] for protan (red)
+				deutan = 0, -- Severity [0,1] for deutan (green)
+				tritan = 0, -- Severity [0,1] for tritan (blue)
+			},
+		},
+		styles = { -- Style to be applied to different syntax groups
+			comments = "NONE", -- Value is any valid attr-list value `:help attr-list`
+			conditionals = "NONE",
+			constants = "NONE",
+			functions = "NONE",
+			keywords = "NONE",
+			numbers = "NONE",
+			operators = "NONE",
+			strings = "NONE",
+			types = "NONE",
+			variables = "NONE",
+		},
+		inverse = { -- Inverse highlight for different types
+			match_paren = false,
+			visual = false,
+			search = false,
+		},
+		modules = { -- List of various plugins and additional options
+			-- ...
+		},
+	},
+	palettes = {},
+	specs = {},
+	groups = {},
+})
 
---
--- local colorscheme = "neosolarized"
---
--- local status_ok, neo = pcall(require, colorscheme)
--- if not status_ok then
---   return
--- end
---
--- neo.setup {
---   comment_italics = true,
--- }
---
--- local cb = require("colorbuddy.init")
--- local Color = cb.Color
--- local colors = cb.colors
--- local Group = cb.Group
--- local groups = cb.groups
--- local styles = cb.styles
---
--- Color.new("black", "#000000")
--- Group.new("CursorLine", colors.none, colors.base03, styles.NONE, colors.base1)
--- Group.new("CursorLineNr", colors.yellow, colors.black, styles.NONE, colors.base1)
--- Group.new("Visual", colors.none, colors.base03, styles.reverse)
---
--- local cError = groups.Error.fg
--- local cInfo = groups.Information.fg
--- local cWarn = groups.Warning.fg
--- local cHint = groups.Hint.fg
---
--- Group.new("DiagnosticVirtualTextError", cError, cError:dark():dark():dark():dark(), styles.NONE)
--- Group.new("DiagnosticVirtualTextInfo", cInfo, cInfo:dark():dark():dark(), styles.NONE)
--- Group.new("DiagnosticVirtualTextWarn", cWarn, cWarn:dark():dark():dark(), styles.NONE)
--- Group.new("DiagnosticVirtualTextHint", cHint, cHint:dark():dark():dark(), styles.NONE)
--- Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl, cError)
--- Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
--- Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
--- Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
+-- setup must be called before loading
+vim.cmd("colorscheme carbonfox")
+
+-- Based on:
+-- https://github.com/EdenEast/nightfox.nvim/blob/main/misc/feline.lua
+-- https://github.com/EdenEast/nightfox.nvim/blob/main/misc/tabby.lua
+-- require("viv.ui.tabby")
+-- require("viv.ui.feline")

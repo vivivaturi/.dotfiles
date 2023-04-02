@@ -170,3 +170,7 @@ keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>")
 
 -- Aerial
 keymap("n", "<leader>at", "<cmd>AerialToggle<cr>")
+
+-- Fugitive
+keymap("n", "<leader>gd", "<cmd>Gvdiff<cr>")
+keymap("n", "<leader>gs", "<cmd>Gvdiffsplit!<cr>")

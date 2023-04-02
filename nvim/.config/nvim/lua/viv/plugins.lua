@@ -106,6 +106,7 @@ return packer.startup(function(use)
 	-- Colorscheme
 	-- use({ "navarasu/onedark.nvim" })
 	use({ "EdenEast/nightfox.nvim" })
+	use({ "rebelot/kanagawa.nvim" })
 
 	-- Nav-buddy
 	use({
@@ -141,6 +142,11 @@ return packer.startup(function(use)
 	-- Scope for bufferline
 	use({ "tiagovla/scope.nvim" })
 
+	-- Undotree
+	use({
+		"mbbill/undotree",
+		cmd = { "UndotreeToggle", "UndotreeFocus" },
+	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

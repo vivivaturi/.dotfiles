@@ -61,10 +61,13 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
--- Yank into clipboard keymap({ "n", "v" }, "<leader>y", [["+y]], opts) keymap("n", "<leader>Y", [["+Y]], opts)
+-- Yank into clipboard
+keymap({ "n", "v" }, "<leader>y", [["+y]], opts)
+keymap("n", "<leader>Y", [["+Y]], opts)
 
 -- Deletes without saving into register
 keymap({ "n", "v" }, "<leader>d", [["_d]], opts)
+keymap("n", "<leader>x", '"_x')
 
 -- Move lines in visual mode
 keymap("v", "K", ":m-2<CR>gv=gv", opts)

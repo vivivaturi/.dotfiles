@@ -50,11 +50,16 @@ return packer.startup(function(use)
 	use({ "szw/vim-maximizer" })
 	use({ "numToStr/Comment.nvim" })
 	use({ "kyazdani42/nvim-tree.lua" })
-	use({ "windwp/nvim-autopairs" })
 	use({ "lewis6991/impatient.nvim" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "gelguy/wilder.nvim" })
 	use({ "ahmedkhalf/project.nvim" })
+
+	-- Treesitter
+	use({ "nvim-treesitter/nvim-treesitter" })
+	use({ "windwp/nvim-autopairs" })
+	use({ "windwp/nvim-ts-autotag" })
+
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "moll/vim-bbye" })
 
@@ -88,11 +93,6 @@ return packer.startup(function(use)
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	})
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-
-	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-	})
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })

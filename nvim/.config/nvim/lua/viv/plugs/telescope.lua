@@ -6,7 +6,6 @@ end
 local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
 local telescopeConfig = require("telescope.Config")
-
 local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
 
 -- I want to search in hidden/dot files.
@@ -63,6 +62,7 @@ telescope.setup({
 					end,
 				},
 			},
+			manual_mode = true,
 		},
 	},
 	pickers = {
@@ -86,5 +86,6 @@ vim.keymap.set("n", "<leader>fe", function()
 		previewer = false,
 		initial_mode = "normal",
 		layout_config = { height = 40 },
+		manual_mode = true,
 	})
 end)

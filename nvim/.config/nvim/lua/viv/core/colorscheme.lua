@@ -80,7 +80,7 @@ color.setup({
 	},
 })
 
-vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme kanagawa-dragon")
 
 -- require("gruvbox").setup({
 -- 	undercurl = true,

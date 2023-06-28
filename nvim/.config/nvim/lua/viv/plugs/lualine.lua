@@ -37,7 +37,7 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-local lualine_theme = require("lualine.themes.palenight")
+local lualine_theme = require("lualine.themes.codedark")
 
 lualine.setup({
 	options = {

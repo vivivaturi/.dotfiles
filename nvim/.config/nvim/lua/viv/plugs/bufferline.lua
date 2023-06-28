@@ -9,7 +9,7 @@ bufferline.setup({
 	options = {
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-		offsets = { { filetype = "NvimTree", text = "File Explorer", highlight = "Directory", padding = 1 } },
+		offsets = { { filetype = "NvimTree", text = "File Explorer", highlight = "Directory", padding = 0 } },
 		separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
 		buffer_close_icon = "",
 		diagnostics = "nvim-lsp",

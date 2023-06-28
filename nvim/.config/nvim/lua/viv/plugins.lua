@@ -106,6 +106,7 @@ return packer.startup(function(use)
 	-- use({ "navarasu/onedark.nvim" })
 	use({ "EdenEast/nightfox.nvim" })
 	use({ "rebelot/kanagawa.nvim" })
+	use({ "ellisonleao/gruvbox.nvim" })
 
 	-- Nav-buddy
 	use({

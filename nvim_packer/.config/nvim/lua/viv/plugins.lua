@@ -101,6 +101,8 @@ return packer.startup(function(use)
 	use({ "mfussenegger/nvim-dap" })
 	use({ "rcarriga/nvim-dap-ui" })
 	use({ "ravenxrz/DAPInstall.nvim" })
+	use({ "mfussenegger/nvim-dap-python" })
+	use({ "jay-babu/mason-nvim-dap.nvim" })
 
 	-- Colorscheme
 	-- use({ "navarasu/onedark.nvim" })
@@ -115,20 +117,13 @@ return packer.startup(function(use)
 			"neovim/nvim-lspconfig",
 			"SmiteshP/nvim-navic",
 			"MunifTanjim/nui.nvim",
+			"numToStr/Comment.nvim",
+			"nvim-telescope/telescope.nvim",
 		},
 	})
 
 	-- Zen-Mode
-	use({
-		"folke/zen-mode.nvim",
-		config = function()
-			require("zen-mode").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
+	use({ "folke/zen-mode.nvim" })
 
 	-- Aerial
 	use({ "stevearc/aerial.nvim" })

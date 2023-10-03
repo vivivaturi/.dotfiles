@@ -1,5 +1,5 @@
 # .dotfiles
-My current configs for my workflow
+My current configs
 
 # Requirements
 

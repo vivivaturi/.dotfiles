@@ -5,5 +5,5 @@ end
 
 require("viv.lsp.mason")
 require("viv.lsp.handlers").setup()
-require("viv.lsp.null-ls")
+-- require("viv.lsp.null-ls")
 require("viv.lsp.lspsaga")

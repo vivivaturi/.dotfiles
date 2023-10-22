@@ -3,4 +3,4 @@
 #
 
 install:
-	./install.sh
+	./install_dots.sh

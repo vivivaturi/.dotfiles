@@ -30,25 +30,6 @@ local plugins = {
 	"rebelot/kanagawa.nvim",
 	"EdenEast/nightfox.nvim",
 
-	-- Tree sitter plugins
-	"nvim-treesitter/nvim-treesitter",
-	"windwp/nvim-autopairs",
-	"windwp/nvim-ts-autotag",
-	"JoosepAlviste/nvim-ts-context-commentstring",
-	"moll/vim-bbye",
-
-	-- Cmp plugins
-	"hrsh7th/nvim-cmp", -- The completion plugin
-	"hrsh7th/cmp-buffer", -- buffer completions
-	"hrsh7th/cmp-path", -- path completions
-	"saadparwaiz1/cmp_luasnip", -- snippet completions
-	"hrsh7th/cmp-nvim-lsp",
-	"hrsh7th/cmp-nvim-lua",
-
-	-- Snippets
-	"L3MON4D3/LuaSnip",
-	"rafamadriz/friendly-snippets",
-
 	-- LSP
 	{
 		"neovim/nvim-lspconfig",
@@ -69,6 +50,24 @@ local plugins = {
 	"RRethy/vim-illuminate",
 	"glepnir/lspsaga.nvim",
 
+	-- Tree sitter plugins
+	"nvim-treesitter/nvim-treesitter",
+	"windwp/nvim-autopairs",
+	"windwp/nvim-ts-autotag",
+	"JoosepAlviste/nvim-ts-context-commentstring",
+	"moll/vim-bbye",
+
+	-- Cmp plugins
+	"hrsh7th/nvim-cmp", -- The completion plugin
+	"hrsh7th/cmp-buffer", -- buffer completions
+	"hrsh7th/cmp-path", -- path completions
+	"saadparwaiz1/cmp_luasnip", -- snippet completions
+	"hrsh7th/cmp-nvim-lsp",
+
+	-- Snippets
+	"L3MON4D3/LuaSnip",
+	"rafamadriz/friendly-snippets",
+
 	-- Line Diagostics
 	"folke/trouble.nvim",
 
@@ -84,9 +83,8 @@ local plugins = {
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		build = "make",
 	},
-
 	-- Lualine
 	"nvim-lualine/lualine.nvim",
 

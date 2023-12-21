@@ -1,5 +1,5 @@
 require("viv.plugins.colorscheme")
-require("viv.plugins.nvim_tree")
+require("viv.plugins.nvimtree")
 require("viv.plugins.autopairs")
 require("viv.plugins.cmp")
 require("viv.plugins.treesitter")

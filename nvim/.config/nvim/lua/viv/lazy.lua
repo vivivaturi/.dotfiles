@@ -19,7 +19,7 @@ local plugins = {
 	"christoomey/vim-tmux-navigator",
 	"szw/vim-maximizer",
 	"numToStr/Comment.nvim",
-	"kyazdani42/nvim-tree.lua",
+	"nvim-tree/nvim-tree.lua",
 	"lewis6991/impatient.nvim",
 	"lukas-reineke/indent-blankline.nvim",
 	"gelguy/wilder.nvim",
@@ -65,7 +65,13 @@ local plugins = {
 	"hrsh7th/cmp-nvim-lsp",
 
 	-- Snippets
-	"L3MON4D3/LuaSnip",
+	{
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp"
+	},
 	"rafamadriz/friendly-snippets",
 
 	-- Line Diagostics

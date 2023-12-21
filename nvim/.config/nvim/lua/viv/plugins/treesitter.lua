@@ -1,14 +1,9 @@
-local status_ok, treesitter = pcall(require, "nvim-treesitter")
+local status_ok, ts_context_commentstring = pcall(require, "ts_context_commentstring")
 if not status_ok then
 	return
 end
 
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-	return
-end
-
-configs.setup({
+ts_context_commentstring.setup({
 	auto_install = true,
 	ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "vim", "typescript", "html", "css" }, -- put the language you want in this array
 	-- ensure_installed = "all", -- one of "all" or a list of languages

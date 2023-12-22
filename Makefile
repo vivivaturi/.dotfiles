@@ -4,3 +4,6 @@
 
 install:
 	./install_dots.sh
+
+clean:
+	./remove_dots.sh

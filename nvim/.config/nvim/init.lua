@@ -1,5 +1,2 @@
-require("viv.options")
-require("viv.keymaps")
-require("viv.lazy")
-require("viv.lsp")
-require("viv.plugins")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

@@ -13,6 +13,15 @@ return {
     keys = {
       -- disable the keymap to grep files
       { "<leader>/", false },
+      -- change a keymap
+      -- { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+      -- {
+      --   "<leader>ff",
+      --   function()
+      --     require("telescope.builtin").find_files({ cwd = false })
+      --   end,
+      --   desc = "Find Files",
+      -- },
     },
     opts = {
       defaults = {

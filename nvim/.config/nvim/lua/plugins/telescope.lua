@@ -31,8 +31,8 @@ return {
         file_browser = {
           theme = "ivy",
           -- disables netrw and use telescope-file-browser in its place
-          hijack_netrw = true,
-          manual_mode = true,
+          -- hijack_netrw = true,
+          hidden = { file_browser = true, folder_browser = true },
         },
       },
     },

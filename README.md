@@ -1,14 +1,16 @@
 # .dotfiles
-<<<<<<< HEAD
-My current configs
-=======
 
-My current configs for my workflow
->>>>>>> fd7dac3 (Updating config)
+My current config files.
+
+Currently using:
+
+1. Tmux
+2. Neovim (LazyVim)
+3. Kitty Terminal
 
 # Requirements
 
-# Cool commands I should remember
+### Cool commands I should remember
 
 ```bash
 FILE=$(fzf) && cat "$FILE" | fzf

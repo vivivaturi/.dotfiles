@@ -45,4 +45,5 @@ luac.out
 
 # after linking, packer.nvim and tpm will install their plugins in the following directories
 nvim/.config/nvim/plugin
+*.json
 tmux/.config/tmux/plugins
